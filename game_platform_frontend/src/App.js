@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Games from './pages/Games';
 import User from './pages/User';
+import LearnMore from './pages/LearnMore';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/games" element={<Games />} />
         <Route path="/user/:id" element={<User />} />
+        <Route path="/learn-more" element={<LearnMore />} />
       </Routes>
     </Router>
   );
