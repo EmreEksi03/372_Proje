@@ -31,3 +31,21 @@ def get_user(user_id):
             'created_at': user[4]
         })
     return jsonify({'error': 'User not found'}), 404
+@bp.route('/<int:user_id>/friends', methods=['GET'])
+def get_friends(user_id):
+    friends = query_db("""
+        SELECT u.user_id, u.username, f.status
+        FROM Friends f
+        JOIN Users u ON f.friend_user_id = u.user_id
+        WHERE f.user_id = %s
+        """, (user_id,))
+    
+    return jsonify([
+        {
+            'user_id': friend[0],
+            'username': friend[1],
+            'status': friend[2]
+        }
+        for friend in friends
+    ])
+
