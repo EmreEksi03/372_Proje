@@ -2,96 +2,140 @@
 .home-container {
     font-family: 'Arial', sans-serif;
     color: #333;
-  }
-  
-  /* Hero Section */
-  .hero-section {
+    padding: 0 10px;
+}
+
+/* Hero Section */
+.hero-section {
     background-color: #1a1a1a;
     color: white;
     text-align: center;
     padding: 50px 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .hero-title {
+    margin-bottom: 30px;
+}
+
+.hero-title {
     font-size: 3.5rem;
     font-weight: bold;
     color: #ffcc00; /* Dikkat çekici sarı renk */
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /* Gölgeleme */
-  }
-  
-  
-  .hero-description {
+}
+
+.hero-description {
     font-size: 1.2rem;
     margin-bottom: 30px;
-  }
-  
-  .cta-buttons {
+    color: #ccc;
+}
+
+.cta-buttons {
     display: flex;
     justify-content: center;
     gap: 20px;
-  }
-  
-  .cta-btn {
+}
+
+.cta-btn {
     padding: 12px 24px;
     font-size: 1.1rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
-  }
-  
-  .cta-btn.primary {
-    background-color: #007bff;
+}
+
+/* Updated buttons */
+.cta-btn.primary {
+    background-color: #656566;
     color: white;
-  }
-  
-  .cta-btn.primary:hover {
-    background-color: #0056b3;
-  }
-  
-  .cta-btn.secondary {
+}
+
+.cta-btn.primary:hover {
+    background-color: #656566;
+}
+
+.cta-btn.secondary {
     background-color: transparent;
-    border: 2px solid #007bff;
-    color: #007bff;
-  }
-  
-  .cta-btn.secondary:hover {
-    background-color: #007bff;
+    border: 2px solid #656566;
+    color: #656566;
+}
+
+.cta-btn.secondary:hover {
+    background-color: #656566;
     color: white;
-  }
-  
-  /* Features Section */
-  .features-section {
+}
+
+/* Greyed-out buttons */
+.cta-btn.grey-btn {
+    background-color: #d3d3d3; /* Light grey background */
+    color: #333; /* Dark text for contrast */
+    border: 2px solid #d3d3d3; /* Same color border */
+}
+
+.cta-btn.grey-btn:hover {
+    background-color: #b0b0b0; /* Darker grey on hover */
+    border-color: #b0b0b0; /* Match border with background */
+}
+
+/* Features Section */
+.features-section {
     text-align: center;
     padding: 50px 20px;
-  }
-  
-  .features-section h2 {
+    background-color: #f8f9fa;
+    margin-bottom: 30px;
+}
+
+.features-section h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
-  }
-  
-  .features {
+    color: #333;
+}
+
+.features {
     display: flex;
     justify-content: space-around;
     gap: 20px;
-  }
-  
-  .feature-card {
-    background-color: #f8f9fa;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     flex-basis: 30%;
-  }
-  
-  .feature-card h3 {
+    margin: 10px 0;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px); /* Slight hover effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
-  }
-  
-  .feature-card p {
+    color: #333;
+}
+
+.feature-card p {
     font-size: 1rem;
-  }
+    color: #555;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+
+    .feature-card {
+        flex-basis: 80%;
+    }
+}
