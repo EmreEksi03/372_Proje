@@ -9,9 +9,7 @@ function Navbar() {
         <Link className="navbar-brand" to="/">Game Platform</Link>
         <div className="collapse navbar-collapse">
           <ul className="navbar-nav ml-auto">
-            <li className="nav-item">
-              <Link className="nav-link" to="/games">Games</Link>
-            </li>
+            {/* Games linkini kaldırdık */}
             <li className="nav-item">
               <Link className="nav-link" to="/user/1">My Profile</Link>
             </li>
